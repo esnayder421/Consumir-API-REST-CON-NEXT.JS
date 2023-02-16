@@ -21,7 +21,6 @@ const Employees = (props) =>{
 
      const Eliminar = (id) => {
         DeleteEmployee(id)
-        alert('cambio de estado')
         setid(id +1)
     }
    
@@ -68,8 +67,6 @@ const Employees = (props) =>{
 export async function getServerSideProps() {
     const res = await fetch('https://api-rest-nodejs-production.up.railway.app/employee')
     const resJson = await res.json()
-    
-    
     return {props:{resJson}}
 }
 
