@@ -15,6 +15,7 @@ const Employees = (props) =>{
     })
     const router = useRouter()
      useEffect( ()=>{
+        console.log('eliminado con exito')
         router.push('/employee')
      }, [id])
 
